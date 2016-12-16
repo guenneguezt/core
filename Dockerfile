@@ -18,6 +18,7 @@ ADD install/bashrc /root/.bashrc
 ADD install/OS_specific/Docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ADD install/install.sh /root/install_docker.sh
+RUN chmod +x /root/install_docker.sh
 RUN /root/install_docker.sh -s 1;exit 0
 RUN /root/install_docker.sh -s 2;exit 0
 RUN /root/install_docker.sh -s 4;exit 0
