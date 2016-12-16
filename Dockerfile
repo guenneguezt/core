@@ -6,41 +6,18 @@ ENV SHELL_ROOT_PASSWORD Mjeedom96
 
 RUN apt-get update && apt-get install -y \
 wget \
-libssh2-php \
-ntp \
-unzip \
-curl \
 openssh-server \
 supervisor \
-cron \
 usb-modeswitch \
 python-serial \
-nodejs \
-npm \
-tar \
-libmcrypt-dev \
-libcurl4-gnutls-dev \
-libfreetype6-dev \
-libjpeg62-turbo-dev \
-libpng12-dev \
-libxml2-dev \
-sudo \
 htop \
 net-tools \
 python \
-ca-certificates \
 vim \
 git \
 g++ \
-locate \
 mysql-client \
-telnet \
-man \
 usbutils \
-libtinyxml-dev \
-libjsoncpp-dev \
-snmp \
-libsnmp-dev \
 iputils-ping
 
 RUN echo "root:${SHELL_ROOT_PASSWORD}" | chpasswd && \
